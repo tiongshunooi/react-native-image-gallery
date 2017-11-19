@@ -269,7 +269,7 @@ export default class ViewPager extends PureComponent {
                 <View style={{
                     width: width + this.props.pageMargin,
                     height: height,
-                    alignItems: 'flex-end'
+                    alignItems: 'flex-end',
                 }}>
                     { element }
                 </View>
@@ -302,7 +302,7 @@ export default class ViewPager extends PureComponent {
               {...gestureResponder}>
                 <FlatList
                   {...this.props.flatListProps}
-                  style={[{ flex: 1 }, scrollViewStyle]}
+                  style={[{ flex: 1 }, scrollViewStyle, {height:100}]}
                   ref={'innerFlatList'}
                   keyExtractor={this.keyExtractor}
                   scrollEnabled={false}

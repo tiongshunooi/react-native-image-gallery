@@ -1,32 +1,64 @@
 {
-  "name": "react-native-image-gallery",
-  "version": "2.1.3",
-  "description": "Pure JavaScript image gallery component for iOS and Android",
-  "main": "src/Gallery.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      {
+        "raw": "react-native-image-gallery@^2.1.3",
+        "scope": null,
+        "escapedName": "react-native-image-gallery",
+        "name": "react-native-image-gallery",
+        "rawSpec": "^2.1.3",
+        "spec": ">=2.1.3 <3.0.0",
+        "type": "range"
+      },
+      "/Users/TiongShun/Desktop/Local/projects/plantrepository-native"
+    ]
+  ],
+  "_from": "react-native-image-gallery@>=2.1.3 <3.0.0",
+  "_id": "react-native-image-gallery@2.1.3",
+  "_inCache": true,
+  "_location": "/react-native-image-gallery",
+  "_nodeVersion": "8.1.4",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-image-gallery-2.1.3.tgz_1509113248804_0.6355669987387955"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/archriss/react-native-image-gallery.git"
+  "_npmUser": {
+    "name": "exilz",
+    "email": "m.bertonnier@gmail.com"
   },
-  "author": "Archriss",
-  "license": "ISC",
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-image-gallery@^2.1.3",
+    "scope": null,
+    "escapedName": "react-native-image-gallery",
+    "name": "react-native-image-gallery",
+    "rawSpec": "^2.1.3",
+    "spec": ">=2.1.3 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-image-gallery/-/react-native-image-gallery-2.1.3.tgz",
+  "_shasum": "8caa5af6052d2eb1afff22003ac7fbd363c701b8",
+  "_shrinkwrap": null,
+  "_spec": "react-native-image-gallery@^2.1.3",
+  "_where": "/Users/TiongShun/Desktop/Local/projects/plantrepository-native",
+  "author": {
+    "name": "Archriss"
+  },
   "bugs": {
     "url": "https://github.com/archriss/react-native-image-gallery/issues"
   },
-  "homepage": "https://github.com/archriss/react-native-image-gallery#readme",
   "dependencies": {
     "prop-types": "^15.6.0",
+    "react-mixin": "^3.0.5",
     "react-native-gesture-responder": "0.1.1",
     "react-native-scroller": "0.0.6",
-    "react-mixin": "^3.0.5",
     "react-timer-mixin": "^0.13.3"
   },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
+  "description": "Pure JavaScript image gallery component for iOS and Android",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
@@ -37,5 +69,41 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.0.1",
     "eslint-plugin-standard": "^3.0.1"
-  }
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-W4D2vFp8O/+TBw3CETJ8MLXNBZlaFJSBIzZ9VJmjYv5Up+SOmYTg2NDQ6LijfREsjuMPWaVvkbfWRtVVSoiXkQ==",
+    "shasum": "8caa5af6052d2eb1afff22003ac7fbd363c701b8",
+    "tarball": "https://registry.npmjs.org/react-native-image-gallery/-/react-native-image-gallery-2.1.3.tgz"
+  },
+  "gitHead": "2eddcadf813f245c6eb8773bc5ba8baf32ecac39",
+  "homepage": "https://github.com/archriss/react-native-image-gallery#readme",
+  "license": "ISC",
+  "main": "src/Gallery.js",
+  "maintainers": [
+    {
+      "name": "bd-arc",
+      "email": "bdelmaire@archriss.com"
+    },
+    {
+      "name": "exilz",
+      "email": "m.bertonnier@gmail.com"
+    }
+  ],
+  "name": "react-native-image-gallery",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "readme": "# react-native-image-gallery\n\n## Table of contents\n\n- [react-native-image-gallery](#react-native-image-gallery)\n    - [Table of contents](#table-of-contents)\n    - [Install](#install)\n    - [Usage example](#usage-example)\n    - [Remote and local images](#remote-and-local-images)\n    - [Props](#props)\n    - [Scroll state and events](#scroll-state-and-events)\n\n>This used to be a fork of [ldn0x7dc/react-native-gallery](https://github.com/ldn0x7dc/react-native-gallery) but since the author has stopped maintaining it, here's our own repo. Props to him for his work !\n\nA pure JavaScript image gallery component for react-native apps with common gestures like pan, pinch and doubleTap, supporting both iOS and Android.\n\nThis component aims to be (one of) the best image viewer for react-native apps. Comparing with other gallery alike components, this one should be more elegant in following aspects: (mimics iOS system photo album app).\n\n* Gesture handle: besides common pan, pinch and doubleTap, this component does well in targeting foucs point( or pivot) when zoom-in and zoom-out.\n* Responder switch: the gesture responder switch is more flexible than any other component, that is, the scrollable container and the wrapped image children perform well in acquiring and releasing gesture responder from/to each other.\n\nThis component utilizes **[@ldn0x7dc/react-native-view-pager](https://github.com/ldn0x7dc/react-native-view-pager)** as the scrollable container and **[react-native-transformable-image](https://github.com/ldn0x7dc/react-native-transformable-image)** as the wrapped image. \n\nThis component works on react-native **0.28+**.\n\nYou can try this example live in **Archriss' showcase app** on [Android](https://play.google.com/store/apps/details?id=fr.archriss.demo.app) and [iOS](https://itunes.apple.com/lu/app/archriss-presentation-mobile/id1180954376?mt=8) or check out the demo.\n\n![react-native-image-gallery](https://media.giphy.com/media/3o7bugPvJyqYWz9bK8/giphy.gif)\n\n## Install\n\n`npm install --save react-native-image-gallery` or `yarn add react-native-image-gallery`\n\n## Usage example\n\n```javascript\nimport Gallery from 'react-native-image-gallery';\n\n  render() {\n    return (\n      <Gallery\n        style={{ flex: 1, backgroundColor: 'black' }}\n        images={[\n          { source: require('yourApp/image.png'), dimensions: { width: 150, height: 150 } },\n          { source: { uri: 'http://i.imgur.com/XP2BE7q.jpg' } },\n          { source: { uri: 'http://i.imgur.com/5nltiUd.jpg' } },\n          { source: { uri: 'http://i.imgur.com/6vOahbP.jpg' } },\n          { source: { uri: 'http://i.imgur.com/kj5VXtG.jpg' } }\n        ]}\n      />\n    );\n  }\n```\n\n## Remote and local images\n\nYou can now use either a remote image, by specifying `source.uri`, or a local image where `source` is the result of your `require()`.\n\n**Be aware that you need to pass the dimensions of your local images ! It's still not required for remotes images**, although you can still provide their dimensions to prevent the gallery from fetching their height and width online, which can improve the perfs a bit.\n\n## Props\n\nProp | Description | Type | Default\n------ | ------ | ------ | ------\n`images` | Your array of images | `array` | Required\n`initialPage` | Image displayed first | `number` | `0`\n`imageComponent` | Custom function to render your images, 1st param is the image props, 2nd is its dimensions | `function` | `<Image>` component\n`errorComponent` | Custom function to render the page of an image that couldn't be displayed | `function` | A `<View>` with a stylized error\n`flatListProps` | Props to be passed to the underlying `FlatList` | `object` | `{windowSize: 3}`\n`pageMargin` | Blank space to show between images | `number` | `0`\n`onPageSelected` | Fired with the index of page that has been selected | `function`\n`onPageScrollStateChanged` | Called when page scrolling state has changed, see [scroll state and events](#scroll-state-and-events) | `function`\n`onPageScroll` | Scroll event, see [scroll state and events](#scroll-state-and-events) | `function`\n`scrollViewStyle` | Custom style for the `FlatList` component | `object` | `{}`\n`onSingleTapConfirmed` | Fired after a single tap | `function`\n`onLongPress` | Fire after a long press | `function`\n\n## Scroll state and events\n\n* `onPageScroll` : (event) => {}. \n\n  The event object carries following data: \n\n  * `position`:  index of first page from the left that is currently visible.\n  * `offset`: value from range [0,1) describing stage between page transitions.\n  * `fraction`: means that (1 - x) fraction of the page at \"position\" index is visible, and x fraction of the next page is visible.\n\n* `onPageScrollStateChanged` : (state) => {}.\n\n  Called when the page scrolling state has changed. The page scrolling state can be in 3 states:\n\n  * `'idle'`: there is no interaction with the page scroller happening at the time.\n  * `'dragging'`: there is currently an interaction with the page scroller.\n  * `'settling'`: there was an interaction with the page scroller, and the page scroller is now finishing it's closing or opening animation.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archriss/react-native-image-gallery.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.1.3"
 }
